@@ -125,6 +125,8 @@ button { cursor: pointer; border: none; outline: none; background: none; font-fa
 
 .view.active {
   display: flex;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .view.visible {
@@ -1560,4 +1562,321 @@ button { cursor: pointer; border: none; outline: none; background: none; font-fa
   color: var(--accent);
   font-style: normal;
   opacity: 0.6;
+}
+
+/* ============================================================
+   MODAL PIX
+   ============================================================ */
+.pix-modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.pix-modal.active {
+  display: flex;
+}
+
+.pix-modal-overlay {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.pix-modal-content {
+  position: relative;
+  background: var(--surface);
+  width: 100%;
+  max-width: 360px;
+  border-radius: var(--radius-lg);
+  padding: 32px 24px;
+  box-shadow: var(--shadow-lg);
+  z-index: 10;
+  text-align: center;
+  animation: modalIn 0.35s var(--ease-out) forwards;
+}
+
+@keyframes modalIn {
+  from { opacity: 0; transform: translateY(20px) scale(0.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.pix-close-btn {
+  position: absolute;
+  top: 14px; right: 18px;
+  font-size: 28px;
+  color: var(--text-faint);
+  line-height: 1;
+  transition: color 0.2s;
+  background: none;
+  border: none;
+  padding: 5px;
+}
+
+.pix-close-btn:active { color: var(--text-main); }
+
+.pix-modal-header h2 {
+  font-family: var(--font-serif);
+  font-size: 24px;
+  color: var(--text-main);
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.pix-modal-header p {
+  font-size: 14.5px;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+/* Loading State */
+.pix-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 0;
+}
+
+.spinner {
+  width: 40px; height: 40px;
+  border: 4px solid var(--border);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.spinner-small {
+  width: 16px; height: 16px;
+  border: 2px solid var(--primary-light);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Ready State */
+.pix-qr-container {
+  background: #fff;
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-light);
+  display: inline-block;
+  margin-bottom: 16px;
+  box-shadow: var(--shadow-xs);
+}
+
+.pix-qr-container img {
+  width: 160px;
+  height: 160px;
+  display: block;
+  object-fit: contain;
+}
+
+.pix-amount {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--success);
+  margin-bottom: 24px;
+  font-family: var(--font-sans);
+  letter-spacing: -0.5px;
+}
+
+.pix-copy-area {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.pix-copy-area input {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg-deep);
+  color: var(--text-muted);
+  font-size: 13px;
+  text-align: center;
+  outline: none;
+}
+
+.pix-waiting-msg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 13.5px;
+  color: var(--primary-dark);
+  background: var(--primary-light);
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  line-height: 1.4;
+  text-align: left;
+}
+
+/* Success State */
+.pix-success {
+  padding: 20px 0 10px;
+}
+
+.success-icon {
+  font-size: 52px;
+  margin-bottom: 16px;
+  animation: popIn 0.6s var(--ease-spring);
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.5); opacity: 0; }
+  60% { transform: scale(1.15); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.pix-success h3 {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  color: var(--text-main);
+  margin-bottom: 12px;
+}
+
+.pix-success p {
+  font-size: 15px;
+  color: var(--text-muted);
+  margin-bottom: 28px;
+  line-height: 1.5;
+}
+
+/* ============================================================
+   SALES PITCH MODAL
+   ============================================================ */
+.sales-pitch .pix-modal-content {
+  max-width: 400px;
+  padding: 40px 28px 32px;
+}
+
+.sales-badge {
+  display: inline-block;
+  background: var(--accent-light);
+  color: var(--accent);
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+  border: 1px solid rgba(160,115,21,0.25);
+}
+
+.sales-features {
+  margin: 24px 0;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.feature-icon {
+  width: 24px; height: 24px;
+  background: var(--success-light);
+  color: var(--success);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.feature-text {
+  font-size: 14.5px;
+  color: var(--text-body);
+  font-weight: 500;
+}
+
+.sales-action-box {
+  background: var(--bg-deep);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  margin-top: 28px;
+}
+
+.sales-price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.price-from {
+  font-size: 15px;
+  text-decoration: line-through;
+  color: var(--text-faint);
+}
+
+.price-to {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--primary-dark);
+}
+
+.sales-secure {
+  font-size: 12px;
+  color: var(--text-faint);
+  margin-top: 15px;
+  font-style: italic;
+}
+
+.btn-glow {
+  box-shadow: 0 0 20px rgba(44, 82, 130, 0.4);
+  animation: glowPulse 2s infinite;
+}
+
+@keyframes glowPulse {
+  0% { box-shadow: 0 0 10px rgba(44, 82, 130, 0.4); }
+  50% { box-shadow: 0 0 25px rgba(44, 82, 130, 0.7); }
+  100% { box-shadow: 0 0 10px rgba(44, 82, 130, 0.4); }
+}
+
+/* ============================================================
+   ESTADOS DE PRODUTO (Locked vs Unlocked)
+   ============================================================ */
+.bonus-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.bonus-card.locked .bonus-card-icon {
+  background: var(--bg-deep);
+  color: var(--text-faint);
+  filter: grayscale(100%);
+}
+
+.bonus-card.locked .bonus-card-title {
+  color: var(--text-muted);
+}
+
+.bonus-card.locked .bonus-card-arrow {
+  font-size: 15px;
+  opacity: 0.8;
+}
+
+.bonus-card.unlocked .bonus-card-title {
+  color: var(--text-main);
 }
