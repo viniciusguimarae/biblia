@@ -19,7 +19,7 @@
   // Substitua 'SUA_HASH_SYNCPAY_AQUI' pelo link real do produto na SyncPay.
   const SYNCPAY_LINKS = {
     // ── PRODUTO DE TESTE ──
-    'teste-premium': 'http://app.syncpayments.com.br/payment-link/a1612a0e-fd0d-4982-b13d-b3830b27b418',
+    'teste-premium': 'https://app.syncpayments.com.br/payment-link/a1614a86-b333-47b2-90cc-3578f3dc3ac8',
 
     // ── PRODUTOS DE PRODUÇÃO (preencher quando tiver os links) ──
     'nova-jerusalem':      'https://checkout.syncpay.com.br/HASH_1',
