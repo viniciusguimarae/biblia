@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="Jornada Bíblica — Estude a Palavra com organização, calma e propósito." />
+  <meta name="theme-color" content="#2C5282" />
+  <title>Jornada Bíblica</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="app-shell">
+
+  <!-- ================================================
+       VIEW: WELCOME
+  ================================================ -->
+  <section id="view-welcome" class="view active">
+    <div class="welcome">
+
+      <!-- Ornamento linear -->
+      <div class="welcome-ornament">
+        <div class="welcome-ornament-line"></div>
+        <div class="welcome-ornament-dot"></div>
+        <div class="welcome-ornament-line"></div>
+      </div>
+
+      <!-- Ícone principal: livro + cruz -->
+      <svg class="welcome-icon" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="96" height="96" rx="22" fill="rgba(255,255,255,0.10)"/>
+        <rect x="18" y="24" width="38" height="52" rx="4" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="1.5"/>
+        <rect x="22" y="24" width="38" height="52" rx="4" fill="none" stroke="rgba(255,255,255,0.65)" stroke-width="1.5"/>
+        <line x1="30" y1="39" x2="52" y2="39" stroke="rgba(255,255,255,0.50)" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="30" y1="46" x2="52" y2="46" stroke="rgba(255,255,255,0.50)" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="30" y1="53" x2="44" y2="53" stroke="rgba(255,255,255,0.50)" stroke-width="1.5" stroke-linecap="round"/>
+        <!-- Cruz em ouro -->
+        <line x1="62" y1="55" x2="62" y2="75" stroke="#F6D860" stroke-width="3" stroke-linecap="round"/>
+        <line x1="54" y1="62" x2="70" y2="62" stroke="#F6D860" stroke-width="3" stroke-linecap="round"/>
+        <!-- Círculo de luz ao redor da cruz -->
+        <circle cx="62" cy="64" r="14" stroke="rgba(246,216,96,0.20)" stroke-width="1.5"/>
+      </svg>
+
+      <p class="welcome-eyebrow">Bem-vindo à sua</p>
+      <h1 class="welcome-title">Jornada Bíblica</h1>
+
+      <div class="welcome-verse">
+        <p>"Lâmpada para os meus pés é a tua palavra, e luz para o meu caminho."</p>
+        <span>Salmos 119:105</span>
+      </div>
+
+      <p class="welcome-tagline">Estude a Palavra com organização, calma e propósito.</p>
+
+      <button class="btn btn-welcome" id="btn-entrar">
+        ✦ &nbsp;Entrar na Jornada
+      </button>
+
+    </div>
+  </section>
+
+  <!-- ================================================
+       VIEW: HOME (Início)
+  ================================================ -->
+  <section id="view-home" class="view">
+    <div class="view-content">
+
+      <!-- Header -->
+      <div class="home-greeting">
+        <div class="home-greeting-inner">
+          <div class="greeting-badge">✦ &nbsp;Jornada Bíblica</div>
+          <h1 class="greeting-title">Bem-vindo à sua<br>Jornada Bíblica</h1>
+          <p class="greeting-desc">Tudo organizado para você estudar no seu próprio ritmo.</p>
+        </div>
+      </div>
+
+      <!-- Indicador simbólico de início da jornada -->
+      <div class="journey-indicator">
+        <div class="journey-indicator-icon">🌱</div>
+        <div class="journey-indicator-text">
+          <strong>Você está iniciando sua jornada</strong>
+          Comece pela Parte 1 e avance no seu ritmo. Cada leitura é um passo real.
+        </div>
+      </div>
+
+      <!-- Jornada simbólica (puramente visual) -->
+      <div class="journey-steps">
+        <div class="journey-steps-title">Seu caminho de estudo</div>
+        <div class="journey-steps-track">
+          <div class="journey-step active">
+            <div class="journey-step-circle">1</div>
+            <span class="journey-step-label">Introdução</span>
+          </div>
+          <div class="journey-step">
+            <div class="journey-step-circle">2</div>
+            <span class="journey-step-label">Antigo Test.</span>
+          </div>
+          <div class="journey-step">
+            <div class="journey-step-circle">3</div>
+            <span class="journey-step-label">Novo Test.</span>
+          </div>
+          <div class="journey-step">
+            <div class="journey-step-circle">4</div>
+            <span class="journey-step-label">Complementos</span>
+          </div>
+        </div>
+        <p class="journey-steps-motto">Siga no seu ritmo. Cada etapa que você completa é crescimento real.</p>
+      </div>
+
+      <!-- Jornada Principal -->
+      <div class="section-label">
+        <div class="section-label-line"></div>
+        <span class="section-label-text">Jornada Principal</span>
+        <div class="section-label-line"></div>
+      </div>
+
+      <div class="cards-list">
+        <button class="home-card card-anim" data-nav="jornada">
+          <div class="home-card-icon blue">📖</div>
+          <div class="home-card-body">
+            <div class="home-card-eyebrow">4 partes · Comece por aqui</div>
+            <div class="home-card-title">Jornada Principal</div>
+            <div class="home-card-desc">Do início ao fim — introdução, Antigo e Novo Testamento.</div>
+          </div>
+          <span class="home-card-arrow">›</span>
+        </button>
+      </div>
+
+      <!-- Bônus Especiais -->
+      <div class="section-label">
+        <div class="section-label-line"></div>
+        <span class="section-label-text">Bônus Especiais</span>
+        <div class="section-label-line"></div>
+      </div>
+
+      <div class="cards-list">
+        <button class="home-card card-anim" data-nav="bonus">
+          <div class="home-card-icon gold">✨</div>
+          <div class="home-card-body">
+            <div class="home-card-eyebrow">11 materiais extras</div>
+            <div class="home-card-title">Bônus Especiais</div>
+            <div class="home-card-desc">Profecias, estudos temáticos e materiais de apoio.</div>
+          </div>
+          <span class="home-card-arrow">›</span>
+        </button>
+      </div>
+
+      <!-- Bloco de retorno pastoral -->
+      <div class="return-block">
+        <p class="return-block-text">Continue sua jornada no seu ritmo.<br>Volte quantas vezes precisar.<br>A Palavra sempre terá algo novo<br>a revelar para você.</p>
+      </div>
+
+      <!-- Divisor espiritual decorativo -->
+      <div style="padding: 4px 20px 0;">
+        <div class="spiritual-divider">
+          <div class="spiritual-divider-symbol">✦</div>
+        </div>
+      </div>
+
+      <div class="spacer-8"></div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       VIEW: ESTUDOS HUB (navegação pelos estudos)
+  ================================================ -->
+  <section id="view-estudos" class="view">
+    <div class="view-content">
+
+      <div class="page-header">
+        <div class="page-header-inner">
+          <div class="page-eyebrow">Estudos</div>
+          <h1 class="page-title">Seus Materiais</h1>
+          <p class="page-desc">Escolha por onde deseja começar.</p>
+        </div>
+      </div>
+
+      <div class="spacer-12"></div>
+
+      <div class="cards-list">
+        <!-- Jornada Principal -->
+        <button class="home-card card-anim" data-nav="jornada">
+          <div class="home-card-icon blue">📖</div>
+          <div class="home-card-body">
+            <div class="home-card-eyebrow">4 partes · Caminho principal</div>
+            <div class="home-card-title">Jornada Principal</div>
+            <div class="home-card-desc">Introdução, Antigo Testamento, Novo Testamento e Complementos.</div>
+          </div>
+          <span class="home-card-arrow">›</span>
+        </button>
+
+        <!-- Bônus Especiais -->
+        <button class="home-card card-anim" data-nav="bonus">
+          <div class="home-card-icon gold">✨</div>
+          <div class="home-card-body">
+            <div class="home-card-eyebrow">11 materiais · Aprofundamento</div>
+            <div class="home-card-title">Bônus Especiais</div>
+            <div class="home-card-desc">Estudos proféticos e materiais de apoio para enriquecer sua jornada.</div>
+          </div>
+          <span class="home-card-arrow">›</span>
+        </button>
+      </div>
+
+      <div class="spacer-20"></div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       VIEW: JORNADA PRINCIPAL (4 partes)
+  ================================================ -->
+  <section id="view-jornada" class="view">
+    <div class="view-content">
+
+      <div class="page-header">
+        <div class="page-header-inner">
+          <button class="back-btn" data-nav="estudos">← Estudos</button>
+          <div class="page-eyebrow">Jornada Principal</div>
+          <h1 class="page-title">Seu Caminho de Estudo</h1>
+          <p class="page-desc">Siga a ordem com calma. Não há pressa — apenas crescimento.</p>
+        </div>
+      </div>
+
+      <div class="spacer-12"></div>
+
+      <div class="cards-list">
+
+        <!-- Parte 1 -->
+        <div class="card card-anim">
+          <div class="card-inner">
+            <div class="card-start-badge">⭐ Comece por aqui</div>
+            <div class="card-header">
+              <div class="card-icon-wrap">📘</div>
+              <div class="card-meta">
+                <div class="card-eyebrow">Parte 1</div>
+                <div class="card-title">Introdução à Jornada Bíblica</div>
+              </div>
+            </div>
+            <p class="card-desc">Uma visão geral para entender a estrutura da Bíblia e como aproveitar melhor sua jornada de estudo.</p>
+            <button class="btn btn-primary btn-full" data-modulo="parte1">
+              📖 &nbsp;Abrir Material
+            </button>
+          </div>
+        </div>
+
+        <!-- Parte 2 -->
+        <div class="card card-anim">
+          <div class="card-inner">
+            <div class="card-header">
+              <div class="card-icon-wrap">📜</div>
+              <div class="card-meta">
+                <div class="card-eyebrow">Parte 2</div>
+                <div class="card-title">Antigo Testamento</div>
+              </div>
+            </div>
+            <p class="card-desc">Explore a formação do povo de Deus, os livros históricos, poéticos e proféticos do Antigo Testamento.</p>
+            <button class="btn btn-primary btn-full" data-modulo="parte2">
+              📖 &nbsp;Abrir Material
+            </button>
+          </div>
+        </div>
+
+        <!-- Parte 3 -->
+        <div class="card card-anim">
+          <div class="card-inner">
+            <div class="card-header">
+              <div class="card-icon-wrap">✝️</div>
+              <div class="card-meta">
+                <div class="card-eyebrow">Parte 3</div>
+                <div class="card-title">Novo Testamento</div>
+              </div>
+            </div>
+            <p class="card-desc">Estude os evangelhos, a vida de Cristo, as cartas apostólicas e a mensagem central do Novo Testamento.</p>
+            <button class="btn btn-primary btn-full" data-modulo="parte3">
+              📖 &nbsp;Abrir Material
+            </button>
+          </div>
+        </div>
+
+        <!-- Parte 4 -->
+        <div class="card card-anim">
+          <div class="card-inner">
+            <div class="card-header">
+              <div class="card-icon-wrap accent">🗺️</div>
+              <div class="card-meta">
+                <div class="card-eyebrow accent">Parte 4</div>
+                <div class="card-title">Complementos e Linha do Tempo</div>
+              </div>
+            </div>
+            <p class="card-desc">Revise cronologias, materiais complementares e recursos que ajudam a consolidar seu entendimento.</p>
+            <button class="btn btn-primary btn-full" data-modulo="parte4">
+              📖 &nbsp;Abrir Material
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="spacer-20"></div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       VIEW: BÔNUS ESPECIAIS (Hub)
+  ================================================ -->
+  <section id="view-bonus" class="view">
+    <div class="view-content">
+
+      <div class="page-header">
+        <div class="page-header-inner">
+          <button class="back-btn" data-nav="estudos">← Estudos</button>
+          <div class="page-eyebrow">Bônus Especiais</div>
+          <h1 class="page-title">Materiais Extras</h1>
+          <p class="page-desc">Estes materiais aprofundam o que você já está construindo dentro de si.</p>
+        </div>
+      </div>
+
+      <div class="spacer-12"></div>
+
+      <div class="cards-list">
+        <!-- Estudos Proféticos -->
+        <button class="home-card card-anim" data-nav="profeticos">
+          <div class="home-card-icon" style="background: linear-gradient(135deg, rgba(88,28,135,0.20), rgba(109,40,217,0.12)); color: #a78bfa; font-size: 22px;">🔮</div>
+          <div class="home-card-body">
+            <div class="home-card-eyebrow">8 estudos · Profecias bíblicas</div>
+            <div class="home-card-title">Estudos Proféticos</div>
+            <div class="home-card-desc">Estudos temáticos sobre profecias e o livro do Apocalipse.</div>
+          </div>
+          <span class="home-card-arrow">›</span>
+        </button>
+
+        <!-- Materiais de Apoio -->
+        <button class="home-card card-anim" data-nav="apoio">
+          <div class="home-card-icon gold">📚</div>
+          <div class="home-card-body">
+            <div class="home-card-eyebrow">3 materiais · Recursos práticos</div>
+            <div class="home-card-title">Materiais de Apoio</div>
+            <div class="home-card-desc">Recursos práticos para enriquecer seus estudos diários.</div>
+          </div>
+          <span class="home-card-arrow">›</span>
+        </button>
+      </div>
+
+      <div class="spacer-28"></div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       VIEW: ESTUDOS PROFÉTICOS (8 itens)
+  ================================================ -->
+  <section id="view-profeticos" class="view">
+    <div class="view-content">
+
+      <div class="page-header">
+        <div class="page-header-inner">
+          <button class="back-btn" data-nav="bonus">← Bônus Especiais</button>
+          <div class="page-eyebrow">Estudos Proféticos</div>
+          <h1 class="page-title">Profecias Bíblicas</h1>
+          <p class="page-desc">Estudos temáticos sobre as profecias e o livro do Apocalipse.</p>
+        </div>
+      </div>
+
+      <div class="spacer-12"></div>
+
+      <div class="bonus-cards">
+        <button class="bonus-card card-anim" data-modulo="nova-jerusalem">
+          <div class="bonus-card-icon">🌅</div>
+          <span class="bonus-card-title">A Nova Jerusalém</span>
+          <span class="bonus-card-arrow">›</span>
+        </button>
+        <button class="bonus-card card-anim" data-modulo="quatro-cavaleiros">
+          <div class="bonus-card-icon">🐎</div>
+          <span class="bonus-card-title">Os 4 Cavaleiros do Apocalipse</span>
+          <span class="bonus-card-arrow">›</span>
+        </button>
+        <button class="bonus-card card-anim" data-modulo="anticristo">
+          <div class="bonus-card-icon">📖</div>
+          <span class="bonus-card-title">O Anticristo</span>
+          <span class="bonus-card-arrow">›</span>
+        </button>
+        <button class="bonus-card card-anim" data-modulo="mulher-vestida-sol">
+          <div class="bonus-card-icon">☀️</div>
+          <span class="bonus-card-title">A Mulher Vestida de Sol</span>
+          <span class="bonus-card-arrow">›</span>
+        </button>
+        <button class="bonus-card card-anim" data-modulo="grande-prostituta">
+          <div class="bonus-card-icon">📜</div>
+          <span class="bonus-card-title">A Grande Prostituta</span>
+          <span class="bonus-card-arrow">›</span>
+        </button>
+        <button class="bonus-card card-anim" data-modulo="grande-tribulacao">
+          <div class="bonus-card-icon">⚡</div>
+          <span class="bonus-card-title">A Grande Tribulação</span>
+          <span class="bonus-card-arrow">›</span>
+        </button>
+        <button class="bonus-card card-anim" data-modulo="sete-trombetas">
+          <div class="bonus-card-icon">📯</div>
+          <span class="bonus-card-title">As Sete Trombetas</span>
+          <span class="bonus-card-arrow">›</span>
+        </button>
+        <button class="bonus-card card-anim" data-modulo="besta-falso-profeta">
+          <div class="bonus-card-icon">🦁</div>
+          <span class="bonus-card-title">A Besta e o Falso Profeta</span>
+          <span class="bonus-card-arrow">›</span>
+        </button>
+      </div>
+
+      <div class="spacer-28"></div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       VIEW: MATERIAIS DE APOIO (3 itens)
+  ================================================ -->
+  <section id="view-apoio" class="view">
+    <div class="view-content">
+
+      <div class="page-header">
+        <div class="page-header-inner">
+          <button class="back-btn" data-nav="bonus">← Bônus Especiais</button>
+          <div class="page-eyebrow">Materiais de Apoio</div>
+          <h1 class="page-title">Recursos Práticos</h1>
+          <p class="page-desc">Recursos para enriquecer e apoiar seus estudos diários.</p>
+        </div>
+      </div>
+
+      <div class="spacer-12"></div>
+
+      <div class="bonus-cards">
+        <button class="bonus-card card-anim" data-modulo="150-esbochos">
+          <div class="bonus-card-icon gold-bg">📝</div>
+          <span class="bonus-card-title">150 Esboços Bíblicos</span>
+          <span class="bonus-card-arrow">›</span>
+        </button>
+        <button class="bonus-card card-anim" data-modulo="250-quiz">
+          <div class="bonus-card-icon gold-bg">❓</div>
+          <span class="bonus-card-title">250 Quiz Bíblico</span>
+          <span class="bonus-card-arrow">›</span>
+        </button>
+        <button class="bonus-card card-anim" data-modulo="plano-leitura">
+          <div class="bonus-card-icon gold-bg">📅</div>
+          <span class="bonus-card-title">Plano de Leitura da Bíblia</span>
+          <span class="bonus-card-arrow">›</span>
+        </button>
+      </div>
+
+      <div class="spacer-28"></div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       VIEW: MÓDULO (tela intermediária de cada PDF)
+  ================================================ -->
+  <section id="view-modulo" class="view">
+    <div class="view-content">
+
+      <div class="page-header">
+        <div class="page-header-inner">
+          <button class="back-btn" id="modulo-back-btn">← Voltar</button>
+          <div class="page-eyebrow" id="modulo-eyebrow">Jornada Principal</div>
+        </div>
+      </div>
+
+      <div class="modulo-hero">
+        <div class="modulo-icon" id="modulo-icon">📖</div>
+        <div class="modulo-badge" id="modulo-badge">Parte 1</div>
+        <h1 class="modulo-title" id="modulo-title">Título do Módulo</h1>
+        <p class="modulo-desc" id="modulo-desc">Descrição do módulo.</p>
+      </div>
+
+      <div class="modulo-actions">
+        <button class="btn btn-primary btn-full modulo-btn-ler" id="modulo-btn-ler">
+          📖 &nbsp;Ler agora
+        </button>
+        <a class="btn btn-secondary btn-full modulo-btn-baixar" id="modulo-btn-baixar" href="#" target="_blank" download>
+          ⬇ &nbsp;Baixar PDF
+        </a>
+      </div>
+
+      <div class="modulo-pastoral" id="modulo-pastoral">
+        <p id="modulo-msg"></p>
+      </div>
+
+      <div class="spacer-20"></div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       VIEW: DOWNLOADS
+  ================================================ -->
+  <section id="view-downloads" class="view">
+    <div class="view-content">
+
+      <div class="page-header">
+        <div class="page-header-inner">
+          <div class="page-eyebrow">Downloads</div>
+          <h1 class="page-title">Todos os Materiais</h1>
+          <p class="page-desc">Seus materiais, sempre disponíveis. Leia onde e quando sentir.</p>
+        </div>
+      </div>
+
+      <div class="spacer-12"></div>
+
+      <!-- Nota informativa -->
+      <div class="download-note">
+        <span class="download-note-icon">ℹ️</span>
+        <p class="download-note-text">
+          Dependendo do seu celular, o PDF pode abrir diretamente ou ser salvo nos seus arquivos para leitura posterior. Nos dois casos, o material estará acessível para você.
+        </p>
+      </div>
+
+      <div class="spacer-12"></div>
+
+      <!-- Jornada Principal -->
+      <div class="section-label">
+        <div class="section-label-line"></div>
+        <span class="section-label-text">Jornada Principal</span>
+        <div class="section-label-line"></div>
+      </div>
+
+      <div class="download-list">
+        <div class="download-item card-anim">
+          <div class="download-item-icon">📘</div>
+          <div class="download-item-body">
+            <div class="download-item-title">Introdução à Jornada Bíblica</div>
+            <div class="download-item-sub">Parte 1 · PDF</div>
+          </div>
+          <a class="download-btn" href="pdfs/Jornada-Da-Bíblia Parte 01.pdf" target="_blank" download="Jornada-Da-Bíblia Parte 01.pdf" title="Baixar PDF">⬇</a>
+        </div>
+        <div class="download-item card-anim">
+          <div class="download-item-icon">📜</div>
+          <div class="download-item-body">
+            <div class="download-item-title">Antigo Testamento</div>
+            <div class="download-item-sub">Parte 2 · PDF</div>
+          </div>
+          <a class="download-btn" href="pdfs/Jornada-Da-Bíblia Parte 02.pdf" target="_blank" download="Jornada-Da-Bíblia Parte 02.pdf" title="Baixar PDF">⬇</a>
+        </div>
+        <div class="download-item card-anim">
+          <div class="download-item-icon">✝️</div>
+          <div class="download-item-body">
+            <div class="download-item-title">Novo Testamento</div>
+            <div class="download-item-sub">Parte 3 · PDF</div>
+          </div>
+          <a class="download-btn" href="pdfs/Jornada-Da-Bíblia Parte 03.pdf" target="_blank" download="Jornada-Da-Bíblia Parte 03.pdf" title="Baixar PDF">⬇</a>
+        </div>
+        <div class="download-item card-anim">
+          <div class="download-item-icon">🗺️</div>
+          <div class="download-item-body">
+            <div class="download-item-title">Complementos e Linha do Tempo</div>
+            <div class="download-item-sub">Parte 4 · PDF</div>
+          </div>
+          <a class="download-btn" href="pdfs/Jornada-Da-Bíblia Parte 04.pdf" target="_blank" download="Jornada-Da-Bíblia Parte 04.pdf" title="Baixar PDF">⬇</a>
+        </div>
+      </div>
+
+      <!-- Bônus Proféticos -->
+      <div class="section-label">
+        <div class="section-label-line"></div>
+        <span class="section-label-text">Bônus Proféticos</span>
+        <div class="section-label-line"></div>
+      </div>
+
+      <div class="download-list">
+        <div class="download-item card-anim">
+          <div class="download-item-icon">🌅</div>
+          <div class="download-item-body">
+            <div class="download-item-title">A Nova Jerusalém</div>
+            <div class="download-item-sub">Estudo Profético · PDF</div>
+          </div>
+          <a class="download-btn" href="pdfs/A_NOVA_JERUSALEM.pdf" target="_blank" download="A_NOVA_JERUSALEM.pdf">⬇</a>
+        </div>
+        <div class="download-item card-anim">
+          <div class="download-item-icon">🐎</div>
+          <div class="download-item-body">
+            <div class="download-item-title">Os 4 Cavaleiros do Apocalipse</div>
+            <div class="download-item-sub">Estudo Profético · PDF</div>
+          </div>
+          <a class="download-btn" href="pdfs/OS_4_CAVALEIROS_DO_APOCALIPSE.pdf" target="_blank" download="OS_4_CAVALEIROS_DO_APOCALIPSE.pdf">⬇</a>
+        </div>
+        <div class="download-item card-anim">
+          <div class="download-item-icon">📖</div>
+          <div class="download-item-body">
+            <div class="download-item-title">O Anticristo</div>
+            <div class="download-item-sub">Estudo Profético · PDF</div>
+          </div>
+          <a class="download-btn" href="pdfs/O_ANTICRISTO.pdf" target="_blank" download="O_ANTICRISTO.pdf">⬇</a>
+        </div>
+        <div class="download-item card-anim">
+          <div class="download-item-icon">☀️</div>
+          <div class="download-item-body">
+            <div class="download-item-title">A Mulher Vestida de Sol</div>
+            <div class="download-item-sub">Estudo Profético · PDF</div>
+          </div>
+          <a class="download-btn" href="pdfs/MULHER_VESTIDA_DE_SOL.pdf" target="_blank" download="MULHER_VESTIDA_DE_SOL.pdf">⬇</a>
+        </div>
+        <div class="download-item card-anim">
+          <div class="download-item-icon">📜</div>
+          <div class="download-item-body">
+            <div class="download-item-title">A Grande Prostituta</div>
+            <div class="download-item-sub">Estudo Profético · PDF</div>
+          </div>
+          <a class="download-btn" href="pdfs/A_GRANDE_PROSTITUTA.pdf" target="_blank" download="A_GRANDE_PROSTITUTA.pdf">⬇</a>
+        </div>
+        <div class="download-item card-anim">
+          <div class="download-item-icon">⚡</div>
+          <div class="download-item-body">
+            <div class="download-item-title">A Grande Tribulação</div>
+            <div class="download-item-sub">Estudo Profético · PDF</div>
+          </div>
+          <a class="download-btn" href="pdfs/A_GRANDE_TRIBULAÇÃO.pdf" target="_blank" download="A_GRANDE_TRIBULAÇÃO.pdf">⬇</a>
+        </div>
+        <div class="download-item card-anim">
+          <div class="download-item-icon">📯</div>
+          <div class="download-item-body">
+            <div class="download-item-title">As Sete Trombetas</div>
+            <div class="download-item-sub">Estudo Profético · PDF</div>
+          </div>
+          <a class="download-btn" href="pdfs/A_SETE_TROMBETAS.pdf" target="_blank" download="A_SETE_TROMBETAS.pdf">⬇</a>
+        </div>
+        <div class="download-item card-anim">
+          <div class="download-item-icon">🦁</div>
+          <div class="download-item-body">
+            <div class="download-item-title">A Besta e o Falso Profeta</div>
+            <div class="download-item-sub">Estudo Profético · PDF</div>
+          </div>
+          <a class="download-btn" href="pdfs/A_BESTA_E_O_FALSO_PROFETA.pdf" target="_blank" download="A_BESTA_E_O_FALSO_PROFETA.pdf">⬇</a>
+        </div>
+      </div>
+
+      <!-- Materiais de Apoio -->
+      <div class="section-label">
+        <div class="section-label-line"></div>
+        <span class="section-label-text">Materiais de Apoio</span>
+        <div class="section-label-line"></div>
+      </div>
+
+      <div class="download-list">
+        <div class="download-item card-anim">
+          <div class="download-item-icon">📝</div>
+          <div class="download-item-body">
+            <div class="download-item-title">150 Esboços Bíblicos</div>
+            <div class="download-item-sub">Material de Apoio · PDF</div>
+          </div>
+          <a class="download-btn" href="pdfs/150_ESBOCOS_LIMPO.pdf" target="_blank" download="150_ESBOCOS_LIMPO.pdf">⬇</a>
+        </div>
+        <div class="download-item card-anim">
+          <div class="download-item-icon">❓</div>
+          <div class="download-item-body">
+            <div class="download-item-title">250 Quiz Bíblico</div>
+            <div class="download-item-sub">Material de Apoio · PDF</div>
+          </div>
+          <a class="download-btn" href="pdfs/250 QUIZ BIBLICO.pdf" target="_blank" download="250 QUIZ BIBLICO.pdf">⬇</a>
+        </div>
+        <div class="download-item card-anim">
+          <div class="download-item-icon">📅</div>
+          <div class="download-item-body">
+            <div class="download-item-title">Plano de Leitura da Bíblia</div>
+            <div class="download-item-sub">Material de Apoio · PDF</div>
+          </div>
+          <a class="download-btn" href="pdfs/PLANO DE LEITURA DA BIBLIA.pdf" target="_blank" download="PLANO DE LEITURA DA BIBLIA.pdf">⬇</a>
+        </div>
+      </div>
+
+      <div class="spacer-28"></div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       VIEW: GUIA DE USO
+  ================================================ -->
+  <section id="view-guia" class="view">
+    <div class="view-content">
+
+      <div class="page-header">
+        <div class="page-header-inner">
+          <div class="page-eyebrow">Guia de Uso</div>
+          <h1 class="page-title">Como Estudar Bem</h1>
+          <p class="page-desc">Um convite para estudar com intenção, leveza e constância.</p>
+        </div>
+      </div>
+
+      <div class="guide-blocks">
+
+        <!-- Como começar -->
+        <div class="guide-block card-anim">
+          <div class="guide-block-inner">
+            <div class="guide-block-header">
+              <div class="guide-block-icon">🚀</div>
+              <div class="guide-block-title">Como começar</div>
+            </div>
+            <div class="guide-block-body">
+              <p style="margin-bottom:13px;color:var(--text-muted);">Siga esta ordem para aproveitar melhor a progressão do estudo:</p>
+              <ul class="guide-step-list">
+                <li class="guide-step">
+                  <span class="guide-step-num">1</span>
+                  <span>Comece pela <strong style="color:var(--text-main)">Introdução à Jornada Bíblica</strong> — ela prepara o terreno para tudo.</span>
+                </li>
+                <li class="guide-step">
+                  <span class="guide-step-num">2</span>
+                  <span>Avance para o <strong style="color:var(--text-main)">Antigo Testamento</strong> e explore as raízes da fé.</span>
+                </li>
+                <li class="guide-step">
+                  <span class="guide-step-num">3</span>
+                  <span>Em seguida, estude o <strong style="color:var(--text-main)">Novo Testamento</strong> e a mensagem de Cristo.</span>
+                </li>
+                <li class="guide-step">
+                  <span class="guide-step-num">4</span>
+                  <span>Use os <strong style="color:var(--text-main)">Bônus Especiais</strong> como complemento ao longo do caminho.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dica de estudo -->
+        <div class="guide-block card-anim">
+          <div class="guide-block-inner">
+            <div class="guide-block-header">
+              <div class="guide-block-icon gold-bg">💡</div>
+              <div class="guide-block-title">Dica de estudo</div>
+            </div>
+            <div class="guide-block-body">
+              <p>Separe alguns minutos por dia para avançar com calma e constância. O ritmo importa mais do que a velocidade.</p>
+              <br>
+              <p>Não há pressa. Cada sessão de estudo, por breve que seja, é um passo real na sua jornada.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Leitura no celular -->
+        <div class="guide-block card-anim">
+          <div class="guide-block-inner">
+            <div class="guide-block-header">
+              <div class="guide-block-icon">📱</div>
+              <div class="guide-block-title">Leitura no celular</div>
+            </div>
+            <div class="guide-block-body">
+              <p>Ao tocar em um botão para abrir um material, o PDF pode:</p>
+              <ul class="guide-step-list" style="margin-top:12px; padding-left: 0;">
+                <li class="guide-step">
+                  <span class="guide-step-num">•</span>
+                  <span><strong style="color:var(--text-main)">Abrir diretamente</strong> no navegador, para leitura imediata.</span>
+                </li>
+                <li class="guide-step">
+                  <span class="guide-step-num">•</span>
+                  <span><strong style="color:var(--text-main)">Ser salvo nos seus arquivos</strong>, dependendo do modelo do celular. Nesse caso, basta acessar o aplicativo de arquivos do dispositivo para encontrá-lo.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Impressão opcional -->
+        <div class="guide-block card-anim">
+          <div class="guide-block-inner">
+            <div class="guide-block-header">
+              <div class="guide-block-icon gray-bg">🖨️</div>
+              <div class="guide-block-title">Impressão opcional</div>
+            </div>
+            <div class="guide-block-body">
+              <p>Se preferir estudar em papel, você pode imprimir qualquer material e organizá-lo como um caderno ou apostila pessoal.</p>
+              <br>
+              <p>Os arquivos foram pensados para funcionar bem tanto na tela quanto impresso.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="spacer-20"></div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       BOTTOM NAVIGATION
+  ================================================ -->
+  <nav class="bottom-nav" id="bottom-nav" style="display:none;">
+    <button class="nav-item active" data-view="home" id="nav-home">
+      <div class="nav-item-bg"></div>
+      <span class="nav-item-icon">🏠</span>
+      <span class="nav-item-label">Início</span>
+    </button>
+    <button class="nav-item" data-view="estudos" id="nav-estudos">
+      <div class="nav-item-bg"></div>
+      <span class="nav-item-icon">📖</span>
+      <span class="nav-item-label">Estudos</span>
+    </button>
+    <button class="nav-item" data-view="downloads" id="nav-downloads">
+      <div class="nav-item-bg"></div>
+      <span class="nav-item-icon">⬇️</span>
+      <span class="nav-item-label">Downloads</span>
+    </button>
+    <button class="nav-item" data-view="guia" id="nav-guia">
+      <div class="nav-item-bg"></div>
+      <span class="nav-item-icon">📋</span>
+      <span class="nav-item-label">Guia</span>
+    </button>
+  </nav>
+
+</div><!-- /app-shell -->
+
+<script src="app.js"></script>
+</body>
+</html>
