@@ -769,6 +769,65 @@
   </section>
 
   <!-- ================================================
+       VIEW: TESTE DE PAGAMENTO
+  ================================================ -->
+  <section id="view-teste" class="view">
+    <div class="view-content">
+
+      <div class="page-header">
+        <div class="page-header-inner">
+          <div class="page-eyebrow">🧪 Área de Teste</div>
+          <h1 class="page-title">Teste de Pagamento</h1>
+          <p class="page-desc">Cenário mínimo para validar o fluxo de compra automático.</p>
+        </div>
+      </div>
+
+      <div class="spacer-12"></div>
+
+      <div class="cards-list">
+
+        <!-- Módulo Liberado (gratuito) -->
+        <div class="card card-anim">
+          <div class="card-inner">
+            <div class="card-start-badge">✅ Acesso Gratuito</div>
+            <div class="card-header">
+              <div class="card-icon-wrap">✅</div>
+              <div class="card-meta">
+                <div class="card-eyebrow">Módulo de Teste</div>
+                <div class="card-title">Estudo Inicial Liberado</div>
+              </div>
+            </div>
+            <p class="card-desc">Este é um conteúdo de teste já liberado para todos os usuários.</p>
+            <button class="btn btn-primary btn-full" data-modulo="teste-liberado">
+              📖 &nbsp;Acessar Conteúdo
+            </button>
+          </div>
+        </div>
+
+        <!-- Módulo Premium (bloqueado) -->
+        <div class="card card-anim">
+          <div class="card-inner">
+            <div class="card-header">
+              <div class="card-icon-wrap">🔒</div>
+              <div class="card-meta">
+                <div class="card-eyebrow">Premium · R$ 1,00</div>
+                <div class="card-title">Módulo Premium de Teste</div>
+              </div>
+            </div>
+            <p class="card-desc">Conteúdo exclusivo. Clique para desbloquear e validar o fluxo de pagamento.</p>
+            <button class="btn btn-primary btn-full locked" data-modulo="teste-premium">
+              🔒 &nbsp;Desbloquear Módulo
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="spacer-20"></div>
+    </div>
+  </section>
+
+  <!-- ================================================
        BOTTOM NAVIGATION
   ================================================ -->
   <nav class="bottom-nav" id="bottom-nav" style="display:none;">
@@ -787,15 +846,65 @@
       <span class="nav-item-icon">⬇️</span>
       <span class="nav-item-label">Downloads</span>
     </button>
-    <button class="nav-item" data-view="guia" id="nav-guia">
+    <button class="nav-item" data-view="teste" id="nav-teste">
       <div class="nav-item-bg"></div>
-      <span class="nav-item-icon">📋</span>
-      <span class="nav-item-label">Guia</span>
+      <span class="nav-item-icon">🧪</span>
+      <span class="nav-item-label">Teste</span>
     </button>
   </nav>
 
 </div><!-- /app-shell -->
 
+<!-- ================================================
+     MODAL DE VENDAS (PITCH)
+================================================ -->
+<div id="sales-modal" class="pix-modal">
+  <div class="pix-modal-overlay" id="sales-close-overlay"></div>
+  <div class="pix-modal-content sales-pitch">
+    <button id="sales-close-btn" class="pix-close-btn">×</button>
+
+    <div class="pix-modal-header">
+      <div class="sales-badge">✨ Conteúdo Exclusivo</div>
+      <h2 id="sales-title">Desbloqueie este Módulo</h2>
+      <p style="font-size:14px;color:var(--text-muted);line-height:1.55;margin-top:10px;">
+        Tenha acesso imediato a este conteúdo exclusivo e continue sua jornada com mais profundidade.
+      </p>
+    </div>
+
+    <div class="sales-features">
+      <div class="feature-item">
+        <span class="feature-icon">✅</span>
+        <span class="feature-text">Acesso imediato após o pagamento</span>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">✅</span>
+        <span class="feature-text">Disponível em qualquer dispositivo</span>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">✅</span>
+        <span class="feature-text">Pagamento único — sem mensalidade</span>
+      </div>
+    </div>
+
+    <div class="sales-action-box">
+      <div class="sales-price">
+        <span class="price-to" id="sales-price">R$ 1,00</span>
+      </div>
+      <button id="sales-buy-btn" class="btn btn-primary btn-full">
+        🔓 Desbloquear Agora
+      </button>
+      <p class="sales-secure">🔒 Pagamento 100% Seguro via SyncPay</p>
+    </div>
+
+    <!-- Processando (oculto por padrão) -->
+    <div id="sales-processing" style="display:none;margin-top:15px;text-align:center;">
+      <div class="spinner-small" style="margin:0 auto 10px;"></div>
+      <p style="font-size:13px;color:var(--primary);">Preparando seu acesso seguro...</p>
+    </div>
+  </div>
+</div>
+
+<script src="https://unpkg.com/@supabase/supabase-js@2"></script>
 <script src="app.js"></script>
 </body>
 </html>
