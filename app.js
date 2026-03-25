@@ -128,7 +128,8 @@
     modulo:     document.getElementById('view-modulo'),
     downloads:  document.getElementById('view-downloads'),
     guia:       document.getElementById('view-guia'),
-    'dinamicas-biblicas': document.getElementById('view-dinamicas')
+    'dinamicas-biblicas': document.getElementById('view-dinamicas'),
+    'acesso-dinamicas': document.getElementById('view-acesso-dinamicas'),
   };
 
   const NAV     = document.getElementById('bottom-nav');
@@ -137,7 +138,8 @@
     home: 'home', estudos: 'estudos', jornada: 'estudos',
     bonus: 'estudos', profeticos: 'estudos', apoio: 'estudos',
     modulo: 'estudos', downloads: 'downloads', guia: 'guia',
-    'dinamicas-biblicas': null
+    'dinamicas-biblicas': null,
+    'acesso-dinamicas': null,
   };
 
   let currentView     = 'welcome';
@@ -198,5 +200,12 @@
     const premiumBtn = e.target.closest('[data-premium]');
     if (premiumBtn) { e.preventDefault(); openSalesModal(premiumBtn.dataset.premium); return; }
   });
+
+  // Lê parâmetro de view direto pela URL (ex: ?view=acesso-dinamicas)
+  const params = new URLSearchParams(window.location.search);
+  const startView = params.get('view');
+  if (startView && VIEWS[startView]) {
+    showView(startView);
+  }
 
 })();
