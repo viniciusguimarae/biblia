@@ -2653,5 +2653,91 @@ button { cursor: pointer; border: none; outline: none; background: none; font-fa
   font-size: 14px;
   color: var(--text-muted);
   line-height: 1.6;
+}
+
+.prem-footer-msg {
   font-style: italic;
+}
+
+.prem-helper-text {
+  font-size: 12.5px;
+  background: var(--surface-warm);
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  color: var(--text-body);
+  margin-bottom: 24px;
+  border: 1px dashed var(--border-light);
+}
+
+.prem-helper-text strong {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+/* UX: Card hover & tap animations */
+.prem-card {
+  transition: background var(--duration-fast), transform var(--duration-fast), box-shadow var(--duration-fast);
+}
+
+.prem-card:hover {
+  background: #FAFCFF;
+}
+
+.prem-card:active {
+  transform: scale(0.98);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+/* Enabled button */
+.prem-btn.active {
+  background: var(--primary);
+  color: #FFF;
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+  pointer-events: auto;
+  opacity: 1;
+  transition: transform var(--duration-fast), filter var(--duration-fast), background var(--duration-fast);
+  box-shadow: 0 2px 6px rgba(43, 108, 176, 0.2);
+}
+
+.prem-btn.active:hover {
+  background: var(--primary-dark);
+}
+
+.prem-btn.active:active {
+  transform: scale(0.96);
+  filter: brightness(0.95);
+}
+
+/* Divider */
+.prem-divider {
+  border: none;
+  height: 1px;
+  background: var(--border-light);
+  margin: 32px 20px;
+  opacity: 0.6;
+}
+
+/* Lifetime Box */
+.prem-lifetime-box {
+  background: #F0FFF4;
+  border: 1px solid #C6F6D5;
+  border-radius: var(--radius-md);
+  padding: 20px 24px;
+  margin-top: 32px;
+  text-align: center;
+}
+
+.prem-lifetime-box h3 {
+  color: #276749;
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.prem-lifetime-box p {
+  color: #2F855A;
+  font-size: 13.5px;
+  line-height: 1.5;
 }
