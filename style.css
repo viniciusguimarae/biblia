@@ -2065,3 +2065,404 @@ button { cursor: pointer; border: none; outline: none; background: none; font-fa
 .bonus-card.unlocked .bonus-card-title {
   color: var(--text-main);
 }
+
+/* ============================================================
+   PRE-SELL INTERNA: DINÂMICAS BÍBLICAS (.ps-*)
+   ============================================================ */
+
+/* Topbar Simples */
+.ps-topbar {
+  display: flex;
+  align-items: center;
+  padding: 16px 20px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border-light);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.ps-btn-back {
+  background: none;
+  border: none;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.ps-topbar-title {
+  flex: 1;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-right: 48px; /* compensar largura do botão voltar */
+}
+
+/* Sections padronizadas */
+.ps-section {
+  padding: 32px 20px;
+}
+
+.ps-bg-light {
+  background: var(--surface-warm);
+  border-top: 1px solid rgba(0,0,0,0.03);
+  border-bottom: 1px solid rgba(0,0,0,0.03);
+}
+
+.ps-section-title {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.3;
+  margin-bottom: 24px;
+}
+
+.ps-text-center { text-align: center; }
+
+/* 1) Hero */
+.ps-hero {
+  padding: 32px 20px 40px;
+  text-align: center;
+  background: linear-gradient(to bottom, #FFFFFF 0%, var(--surface-warm) 100%);
+}
+
+.ps-hero-badge {
+  display: inline-block;
+  background: var(--surface-dark);
+  color: var(--surface);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.ps-hero-title {
+  font-family: var(--font-serif);
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--text-main);
+  line-height: 1.25;
+  margin-bottom: 14px;
+  letter-spacing: -0.5px;
+}
+
+.ps-hero-subtitle {
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 28px;
+}
+
+.ps-video-wrapper {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  background: #000;
+  border-radius: var(--radius-md);
+  margin-bottom: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.ps-video-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #1A365D 0%, #0F2039 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.ps-play-icon {
+  width: 60px;
+  height: 60px;
+  background: rgba(255,255,255,0.15);
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFF;
+  font-size: 24px;
+  padding-left: 4px; /* offset ótico do play */
+  backdrop-filter: blur(4px);
+  transition: transform var(--duration-fast);
+}
+
+.ps-video-placeholder:active .ps-play-icon {
+  transform: scale(0.95);
+}
+
+.ps-trust-text {
+  font-size: 13px;
+  color: var(--text-body);
+  line-height: 1.5;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+/* 2) Dores / Identificação */
+.ps-pain-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ps-pain-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: #FFF;
+  padding: 14px 16px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-light);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.ps-pain-icon {
+  color: #E53E3E;
+  font-weight: bold;
+  font-size: 14px;
+  margin-top: 2px;
+}
+
+.ps-pain-item p {
+  font-size: 14px;
+  color: var(--text-body);
+  line-height: 1.45;
+}
+
+/* 3) Entregáveis */
+.ps-deliverables-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.ps-deliv-card {
+  background: #FFF;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  padding: 16px 14px;
+  text-align: center;
+}
+
+.ps-deliv-icon {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.ps-deliv-card h3 {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+
+.ps-deliv-card p {
+  font-size: 11.5px;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+/* 4) Para Quem É */
+.ps-target-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ps-tag {
+  background: #FFF;
+  border: 1px solid var(--primary-light);
+  color: var(--primary-dark);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 20px;
+}
+
+/* 5) Como Funciona */
+.ps-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ps-step {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.ps-step-num {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--primary-light);
+  color: var(--primary-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.ps-step p {
+  font-size: 15px;
+  color: var(--text-body);
+  line-height: 1.4;
+}
+
+/* 6) Suporte / Email */
+.ps-support-intro {
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--text-body);
+  margin-bottom: 20px;
+}
+
+.ps-support-box {
+  background: #FFFBEB; /* Amarelo bem suave */
+  border: 1px solid #F6E05E;
+  border-radius: var(--radius-md);
+  padding: 20px;
+}
+
+.ps-support-list {
+  margin: 0 0 16px 0;
+  padding-left: 20px;
+  font-size: 14px;
+  color: var(--text-body);
+  line-height: 1.6;
+}
+
+.ps-support-list li {
+  margin-bottom: 6px;
+}
+
+.ps-support-highlight {
+  background: #FFF;
+  border: 1px dashed #D69E2E;
+  padding: 12px 14px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.ps-support-highlight span {
+  display: block;
+  font-size: 12px;
+  color: #715A0F;
+  margin-bottom: 4px;
+}
+
+.ps-support-highlight strong {
+  display: block;
+  font-size: 15px;
+  color: #744210;
+  font-weight: 700;
+}
+
+/* 7) Percepção de Valor */
+.ps-value-text {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-body);
+  margin-bottom: 16px;
+}
+
+.ps-value-note {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+/* 8) Oferta */
+.ps-offer-section {
+  padding: 40px 20px;
+  background: var(--surface);
+}
+
+.ps-offer-card {
+  background: #FFFFFF;
+  border: 2px solid var(--primary-light);
+  border-radius: var(--radius-lg);
+  padding: 32px 24px;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(44, 82, 130, 0.08);
+}
+
+.ps-offer-badge {
+  display: inline-block;
+  background: #FFFBEB;
+  color: #B7791F;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid #F6E05E;
+  margin-bottom: 20px;
+}
+
+.ps-offer-price-old {
+  font-size: 16px;
+  color: var(--text-faint);
+  text-decoration: line-through;
+  margin-bottom: 4px;
+}
+
+.ps-offer-price-new {
+  font-size: 15px;
+  color: var(--text-main);
+  margin-bottom: 24px;
+}
+
+.ps-offer-price-new strong {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--success);
+  letter-spacing: -1px;
+  display: block;
+  margin-top: 4px;
+}
+
+.ps-offer-note {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+
+.ps-cta-btn {
+  font-size: 16px;
+  padding: 16px 20px;
+  box-shadow: 0 4px 14px rgba(44,82,130,0.25);
+}
+
+/* 9) Reassurance */
+.ps-reassurance {
+  padding: 0 32px 40px;
+  text-align: center;
+}
+
+.ps-reassurance p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.ps-reassurance-note {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--primary-light);
+}

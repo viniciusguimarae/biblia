@@ -128,6 +128,7 @@
     modulo:     document.getElementById('view-modulo'),
     downloads:  document.getElementById('view-downloads'),
     guia:       document.getElementById('view-guia'),
+    'dinamicas-biblicas': document.getElementById('view-dinamicas')
   };
 
   const NAV     = document.getElementById('bottom-nav');
@@ -136,6 +137,7 @@
     home: 'home', estudos: 'estudos', jornada: 'estudos',
     bonus: 'estudos', profeticos: 'estudos', apoio: 'estudos',
     modulo: 'estudos', downloads: 'downloads', guia: 'guia',
+    'dinamicas-biblicas': null
   };
 
   let currentView     = 'welcome';
